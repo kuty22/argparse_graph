@@ -11,16 +11,27 @@ Add senarios logique after using argparse.
 
 # Use it
 
+methods to get results:  
+```python
+agg.get_one()
+agg.get_dict()
+agg.get_all()
+```
 
 _requirements_:
-- python3.5 <
-
-## Documentation
-
-_Packages available_:  
 - python=3.5
 - pyyaml
 
+## Documentation
+
+```
+option : "all"
+option: argv1, argv2
+option: [argv1, argv2]
+option:
+  - argv1
+  - argv2
+```
 
 __Reference__:
 

@@ -4,10 +4,10 @@
 import argparse
 import yaml
 
-from src.argparsGraph import argparseGraph as agG
+from argparseGraph import argparseGraph as agG
 
 def parsarg():
-    parser = argparse.ArgumentParser(description="random option for senarios")
+    parser = argparse.ArgumentParser(description="random options for senarios")
     parser.add_argument("-q", dest="argv1", help="test", type=int)
     parser.add_argument("-w", dest="argv2", help="test", type=int, action='append')
     parser.add_argument("-e", dest="argv3", help="test", type=str, default="test3")
@@ -20,9 +20,11 @@ def parsarg():
     return args
 
 def main():
+    help(agG)
     res_args = parsarg()
-    agg = agG("senarios_examples.yml", res_args, verbose=False)
-    agg.choose()
+    print(res_args)
+    agg = agG.argparseGraph("senarios_examples.yml", res_args, verbose=False)
+    print(agg.get_dict())
 
 if __name__ == '__main__':
     main()

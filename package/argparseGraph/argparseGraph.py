@@ -5,7 +5,6 @@ import yaml
 
 class argparseGraph:
 
-
     def __init__(self, configuration_file, argpars, verbose=False):
         self.__conf_path = configuration_file
         try:
@@ -56,10 +55,17 @@ class argparseGraph:
             if k not in senario["options"] and item != None:
                 senario["status"] = "Fail"
 
-    def choose(self):
-        print("conf: {}".format(self.__conf))
-        print("args: {}".format(self.__args))
+    def get_one(self):
+        for senario, obj in self.__conf.items():
+            if obj["status"] == None:
+                return senario
+        return dict({"Error": "Not senario found", "status": -1})
 
+    def get_dict(self):
+        for senario, obj in self.__conf.items():
+            if obj["status"] == None:
+                return obj
+        return dict({"Error": "Not senario found", "status": -1})
 
-if __name__ == '__main__':
-    print("Hello World")
+    def get_all(self):
+        return self.__conf
