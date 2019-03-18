@@ -20,11 +20,11 @@ def parsarg():
     return args
 
 def main():
-    help(agG)
     res_args = parsarg()
     print(res_args)
+
     agg = agG.argparseGraph("senarios_examples.yml", res_args, verbose=False)
-    print(agg.get_dict())
+    print(agg.get_one())
 
 if __name__ == '__main__':
     main()

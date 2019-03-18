@@ -11,8 +11,7 @@ class argparseGraph:
             with open(configuration_file, 'r') as stream_file:
                 self.__conf = yaml.load(stream_file)
         except OSError as err:
-            print("OS error: {0}".format(err))
-            exit(-1)
+            raise OSError(err)
         if verbose:
             for key, value in self.__conf.items():
                 print("strategie: {}".format(key))
@@ -24,7 +23,6 @@ class argparseGraph:
         for title, senario in self.__conf.items():
 
             senario.update(dict({"status": None}))
-            none_present = False
             options_list = []
 
             if type(senario["options"]) is str:
@@ -36,10 +34,8 @@ class argparseGraph:
                 if senario["options"] == "all":
                     for k, item in self.__args.items():
                         if item is None:
-                            none_present = True
+                            senario["status"] =  "Fail"
                             break
-                    if none_present:
-                        senario["status"] =  "Fail"
             else:
                 # list format
                 self.__check_option_senario(senario)
@@ -52,17 +48,18 @@ class argparseGraph:
                 print("APG error: Bad param name in {}".format(self.__conf_path))
                 exit(-1)
         for k, item in self.__args.items():
-            if k not in senario["options"] and item != None:
+            if (k not in senario["options"] and item != None) or \
+               (k in senario["options"] and item is None):
                 senario["status"] = "Fail"
 
     def get_one(self):
-        for senario, obj in self.__conf.items():
+        for senario, obj in sorted(self.__conf.items()):
             if obj["status"] == None:
                 return senario
         return dict({"Error": "Not senario found", "status": -1})
 
     def get_dict(self):
-        for senario, obj in self.__conf.items():
+        for senario, obj in sorted(self.__conf.items()):
             if obj["status"] == None:
                 return obj
         return dict({"Error": "Not senario found", "status": -1})

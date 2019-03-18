@@ -7,4 +7,6 @@ senario_3:
     - argv3
     - argv4
 senario_4:
-  options: argv1, argv2
+  options: argv3, argv4, argv6, argv7
+senario_5:
+  options: ""

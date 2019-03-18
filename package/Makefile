@@ -5,7 +5,10 @@ PYTHON_DEFAULT_EXEC=python3
 install:
 ifndef python_exec
 	echo $(INSTALL_PYTHON_PACKAGE_MSG)
-	$(PYTHON_DEFAULT_EXEC) $(EXEC) install
+	$(PYTHON_DEFAULT_EXEC) $(EXEC) install --record uninstall.txt
 else
-	$(python_exec) $(EXEC) install
+	$(python_exec) $(EXEC) install --record uninstall.txt
 endif
+
+uninstall:
+	cat uninstall.txt | xargs sudo rm -rf

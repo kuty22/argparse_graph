@@ -11,6 +11,9 @@ Add senarios logique after using argparse.
 
 # Use it
 
+> For the moment the parameter define with argparse must be named (dest="argsName")if not it will  
+> be impossible to find some link between the variable name and the name in the yaml file.
+
 methods to get results:  
 ```python
 agg.get_one()
@@ -24,14 +27,21 @@ _requirements_:
 
 ## Documentation
 
-```
-option : "all"
-option: argv1, argv2
-option: [argv1, argv2]
-option:
-  - argv1
-  - argv2
-```
+_Makefile commands available_:
+
+| **commands name** | **description**                 |
+|:-----------------:|:------------------------------- |
+|  `make install`   | install `argparseGraph`         |
+|                   |                                 |
+| `make uninstall`  | uninstall `argparseGraph`       |
+|                   |                                 |
+|    `make test`    | run test on sources not install |
+|                   |                                 |
+|  `make test_int`  | run test on the package install |
+|                   |                                 |
+|  `make example`   | run example                     |
+|                   |                                 |
+
 
 __Reference__:
 
