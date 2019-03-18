@@ -10,12 +10,9 @@ setuptools.setup(
     description="yaml to add logique with argparse object.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # url="https://github.com/pypa/sampleproject",
-    # packages=["argparseGraph"],
     install_requires=["yamllint"],
     tests_require=["pytest"],
-    packages=setuptools.find_packages('argparseGraph'),
-    package_dir={'':'argparseGraph'},
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
