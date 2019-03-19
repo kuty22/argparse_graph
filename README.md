@@ -139,7 +139,7 @@ _Makefile commands available_:
 |         `make test_install`          | run test on the package installed     |
 |                                      |                                       |
 |              `make run`              | run example                           |
-| `make run senarios=[1 , 2, 3, 4, 5]` | run example with a specifique senario |
+| `make run senarios=[1 , 2, 3, 4, 5]` | run example with a specifique senarios|
 |                                      |                                       |
 
 you can specify makefile options:
