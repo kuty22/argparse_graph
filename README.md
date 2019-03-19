@@ -10,23 +10,23 @@
 
 ## Description
 Add logic in argpars object with argparsGraph.  
-This package help you to avoid the if/else forests after `argparse`
+This package helps you to avoid the if/else forestswhen using `argparse`
 
 ## Install
 
-Install package:
+Install the package:
 ```shell
 make install
 ```
 
-Uninstall package:
+Uninstall the package:
 ```shell
 make uninstall
 ```
 
 ## Use it
 
-> The parameter define with argparse must be named (dest="argsName")if not it will  
+> The parameter defined with argparse must be named (dest="argsName")if not, it will  
 > be impossible to find some link between the variable name and the name in the yaml file.
 
 example of argparse object:
@@ -85,8 +85,8 @@ senario_4:
   options: argv3, argv4, argv6, argv7
 ```
 
-With the `argparseGraph` object you can get 3 differents result format,
-with these method:  
+With the `argparseGraph` object you can get 3 differents results formats,
+with those methods:  
 ```python
 # Return the name of the strategie in the yaml file.
 agg.get_one()
@@ -110,15 +110,15 @@ agg.get_all()
 
 ## Tests
 
-Tow type of tests are available, the first one is run on the sources in the project directory,
-the second one is run on the package install on your system.
+Two types of tests are available, the first one is running on the sources in the project directory,
+the second one is running on the package install on your system.
 
-run test on the package not install:
+run test on the package not installed:
 ```
 make test
 ```
 
-run test on the package install:
+run test on the package installed:
 ```
 make test_install
 ```
@@ -134,9 +134,9 @@ _Makefile commands available_:
 |                                      |                                       |
 |           `make uninstall`           | uninstall `argparseGraph`             |
 |                                      |                                       |
-|             `make test`              | run test on sources not install       |
+|             `make test`              | run test on sources not installed     |
 |                                      |                                       |
-|         `make test_install`          | run test on the package install       |
+|         `make test_install`          | run test on the package installed     |
 |                                      |                                       |
 |              `make run`              | run example                           |
 | `make run senarios=[1 , 2, 3, 4, 5]` | run example with a specifique senario |
@@ -144,11 +144,11 @@ _Makefile commands available_:
 
 you can specify makefile options:
 
-|   **commands name**   | **default** | **description**                             |
+|   **define name**   | **default** | **description**                             |
 |:---------------------:|:----------- | ------------------------------------------- |
-|  `EXEC_DEFAULT_TEST`  | pytest      | Tools for run test                          |
+|  `EXEC_DEFAULT_TEST`  | pytest      | Tools to run tests                          |
 |                       |             |                                             |
-| `PYTHON_DEFAULT_EXEC` | python3     | Python use to run  test and install package |
+| `PYTHON_DEFAULT_EXEC` | python3     | Use Python to run tests and install package |
 |                       |             |                                             |
 
 
