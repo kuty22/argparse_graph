@@ -3,8 +3,9 @@
 #import
 import argparse
 import yaml
+import json
 
-from argparseGraph import argparseGraph as agG
+from argparseGraph.argparseGraph import argparseGraph as agG
 
 def parsarg():
     parser = argparse.ArgumentParser(description="random options for senarios")
@@ -21,10 +22,19 @@ def parsarg():
 
 def main():
     res_args = parsarg()
-    print(res_args)
+    agg = agG("senarios_examples.yml", res_args, verbose=False)
 
-    agg = agG.argparseGraph("senarios_examples.yml", res_args, verbose=False)
-    print(agg.get_one())
+    agg_one = agg.get_one()
+    print("get_one: {}".format(agg_one))
+
+    print("\nget_dict:")
+    agg_dict = agg.get_dict()
+    print(json.dumps(agg_dict, sort_keys=True, indent=4))
+
+    print("\nget_all:")
+    agg_all = agg.get_all()
+    print(json.dumps(agg_all, sort_keys=True, indent=4))
+
 
 if __name__ == '__main__':
     main()

@@ -22,23 +22,25 @@ class argparseGraph:
     def __loop_options_available(self):
         for title, senario in self.__conf.items():
 
-            senario.update(dict({"status": None}))
+            senario.update(dict({"name": title, "status": None}))
             options_list = []
-
-            if type(senario["options"]) is str:
-                # one line list
-                if "," in senario["options"]:
-                    senario["options"] = senario["options"].replace(" ", '').split(",")
+            if len(senario["options"]) > 0:
+                if type(senario["options"]) is str:
+                    # one line list
+                    if "," in senario["options"]:
+                        senario["options"] = senario["options"].replace(" ", '').split(",")
+                        self.__check_option_senario(senario)
+                    # all
+                    if senario["options"] == "all":
+                        for k, item in self.__args.items():
+                            if item is None:
+                                senario["status"] =  "Fail"
+                                break
+                else:
+                    # list format
                     self.__check_option_senario(senario)
-                # all
-                if senario["options"] == "all":
-                    for k, item in self.__args.items():
-                        if item is None:
-                            senario["status"] =  "Fail"
-                            break
             else:
-                # list format
-                self.__check_option_senario(senario)
+                senario["status"] =  "Fail"
 
     def __check_option_senario(self, senario):
         for needed_args in senario["options"]:
