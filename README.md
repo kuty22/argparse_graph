@@ -54,7 +54,7 @@ agg = agg("senarios.yml", res_args, verbose=False)
 
 **senario.yml**
 ```yaml
-# if all arguments are note None
+# if all parameters are not None
 # cmd: ./main.py -q 1 -w 1 -w 2 -e t -t o -a o -s t -d "Hello"  -d "World"
 senario_1:
   options: "all"
@@ -128,7 +128,7 @@ make test_install
 
 _Makefile commands available_:
 
-|          **commands name**           | **description**                       |
+|          **Commands name**           | **Description**                       |
 |:------------------------------------:|:------------------------------------- |
 |            `make install`            | install `argparseGraph`               |
 |                                      |                                       |
@@ -144,13 +144,17 @@ _Makefile commands available_:
 
 you can specify makefile options:
 
-|   **define name**   | **default** | **description**                             |
+|    **Define name**    | **Default** | **Description**                             |
 |:---------------------:|:----------- | ------------------------------------------- |
 |  `EXEC_DEFAULT_TEST`  | pytest      | Tools to run tests                          |
 |                       |             |                                             |
 | `PYTHON_DEFAULT_EXEC` | python3     | Use Python to run tests and install package |
 |                       |             |                                             |
 
+
+**Credit Idea Gael Rottier**
+  - [Medium](https://medium.com/@gaelrottier)
+  - [Linkedin](https://www.linkedin.com/in/gaël-rottier-53080263/)
 
 __Reference__:
 
