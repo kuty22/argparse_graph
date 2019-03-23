@@ -1,8 +1,12 @@
-senario_1:
+# scenario_1:
+1:
   options: "all"
-senario_2:
+# scenario_2:
+2:
   options: argv3, argv4
-senario_3:
+# scenario_3
+3:
   options: argv1, argv2, argv3, argv4
-senario_4:
+# scenario_4
+4:
   options: argv3, argv4, argv6, argv7

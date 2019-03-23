@@ -6,18 +6,18 @@ PYTHON_DEFAULT_EXEC=python3
 all: run
 
 run:
-ifndef senarios
-	$(MAKE) -C examples run_senario_1
-else ifeq ($(senarios), 2)
-	$(MAKE) -C examples run_senario_2
-else ifeq ($(senarios), 3)
-	$(MAKE) -C examples run_senario_3
-else ifeq ($(senarios), 4)
-	$(MAKE) -C examples run_senario_4
-else ifeq ($(senarios), 5)
-	$(MAKE) -C examples run_senario_5
+ifndef scenario
+	$(MAKE) -C examples run_scenario_1
+else ifeq ($(scenario), 2)
+	$(MAKE) -C examples run_scenario_2
+else ifeq ($(scenario), 3)
+	$(MAKE) -C examples run_scenario_3
+else ifeq ($(scenario), 4)
+	$(MAKE) -C examples run_scenario_4
+else ifeq ($(scenario), 5)
+	$(MAKE) -C examples run_scenario_5
 else
-	$(MAKE) -C examples run_senario_defaults
+	$(MAKE) -C examples run_scenario_defaults
 endif
 
 test_install:

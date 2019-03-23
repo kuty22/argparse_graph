@@ -16,24 +16,24 @@ def test_all_str():
     """
     option: "all"
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples.yml", argparse_obj_1)
-    assert res.get_one() == 'senario_1'
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples.yml", argparse_obj_1)
+    assert res.get_one() == 'scenario_1'
 
 def test_all_int():
     """
     option: "all"
     return get_one: 1
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_digit.yml", argparse_obj_1)
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_digit.yml", argparse_obj_1)
     assert res.get_one() == 1
 
 def test_all_args():
     """
     option: "all"
-    return get_one: senario_1
+    return get_one: scenario_1
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_args.yml", argparse_obj_1)
-    assert res.get_one() == "senario_1"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_args.yml", argparse_obj_1)
+    assert res.get_one() == "scenario_1"
 
 def test_all_list():
     """
@@ -45,25 +45,25 @@ def test_all_list():
     - argv5
     - argv6
     - argv7
-    return get_one: "senario_1"
+    return get_one: "scenario_1"
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_list.yml", argparse_obj_1)
-    assert res.get_one() == "senario_1"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_list.yml", argparse_obj_1)
+    assert res.get_one() == "scenario_1"
 
 def test_two_args_str():
     """
     option:  argv3, argv4
-    return get_one: senario_2
+    return get_one: scenario_2
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples.yml", argparse_obj_4)
-    assert res.get_one() == "senario_2"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples.yml", argparse_obj_4)
+    assert res.get_one() == "scenario_2"
 
 def test_two_args_int():
     """
     option:  argv3, argv4
     return get_one: 2
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_digit.yml", argparse_obj_4)
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_digit.yml", argparse_obj_4)
     assert res.get_one() == 2
 
 def test_two_args_args():
@@ -71,8 +71,8 @@ def test_two_args_args():
     option:  argv3, argv4
     return get_one: 2
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_args.yml", argparse_obj_4)
-    assert res.get_one() == "senario_2"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_args.yml", argparse_obj_4)
+    assert res.get_one() == "scenario_2"
 
 def test_two_args_list():
     """
@@ -81,32 +81,32 @@ def test_two_args_list():
         - argv4
     return get_one: 2
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_list.yml", argparse_obj_4)
-    assert res.get_one() == "senario_2"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_list.yml", argparse_obj_4)
+    assert res.get_one() == "scenario_2"
 
 def test_args_str():
     """
     option:  argv1, argv2, argv3, argv4
-    return get_one: senario_2
+    return get_one: scenario_2
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples.yml", argparse_obj_2)
-    assert res.get_one() == "senario_3"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples.yml", argparse_obj_2)
+    assert res.get_one() == "scenario_3"
 
 def test_args_int():
     """
     option:  argv1, argv2, argv3, argv4
     return get_one: 3
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_digit.yml", argparse_obj_2)
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_digit.yml", argparse_obj_2)
     assert res.get_one() == 3
 
 def test_args_args():
     """
     option: argv1, argv2, argv3, argv4
-    return get_one: senario_3
+    return get_one: scenario_3
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_args.yml", argparse_obj_2)
-    assert res.get_one() == "senario_3"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_args.yml", argparse_obj_2)
+    assert res.get_one() == "scenario_3"
 
 def test_args_list():
     """
@@ -115,34 +115,34 @@ def test_args_list():
         - argv2
         - argv3
         - argv4
-    return get_one: senario_3
+    return get_one: scenario_3
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_list.yml", argparse_obj_2)
-    assert res.get_one() == "senario_3"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_list.yml", argparse_obj_2)
+    assert res.get_one() == "scenario_3"
 
 def test_args_str():
     """
     option:  argv3, argv4, argv6, argv7
-    return get_one: senario_4
+    return get_one: scenario_4
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples.yml", argparse_obj_3)
-    assert res.get_one() == "senario_4"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples.yml", argparse_obj_3)
+    assert res.get_one() == "scenario_4"
 
 def test_args_int():
     """
     option:  argv3, argv4, argv6, argv7
     return get_one: 4
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_digit.yml", argparse_obj_3)
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_digit.yml", argparse_obj_3)
     assert res.get_one() == 4
 
 def test_args_args():
     """
     option: [argv3, argv4, argv6, argv7]
-    return get_one: senario_4
+    return get_one: scenario_4
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_args.yml", argparse_obj_3)
-    assert res.get_one() == "senario_4"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_args.yml", argparse_obj_3)
+    assert res.get_one() == "scenario_4"
 
 def test_args_list():
     """
@@ -151,10 +151,10 @@ def test_args_list():
         - argv4
         - argv6
         - argv7
-    return get_one: senario_4
+    return get_one: scenario_4
     """
-    res = agg(CURRENT_DIR + "/yaml/senarios_examples_list.yml", argparse_obj_3)
-    assert res.get_one() == "senario_4"
+    res = agg(CURRENT_DIR + "/yaml/scenarios_examples_list.yml", argparse_obj_3)
+    assert res.get_one() == "scenario_4"
 
 def test_bad_file():
     """

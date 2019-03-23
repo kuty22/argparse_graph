@@ -1,19 +1,19 @@
-senario_1:
+scenario_1:
   options: "all"
-senario_2:
-  options: [argv3, argv4]
-senario_3:
+scenario_2:
+  options: [argv1, argv2, argv3, argv4]
+scenario_3:
   options:
     - argv3
     - argv4
-senario_4:
+scenario_4:
   options: argv3, argv4, argv6, argv7
-senario_test:
+scenario_test:
   options:
     - argv3
     - argv4
     - argv5
     - argv6
     - argv7
-senario_5:
+scenario_5:
   options: ""

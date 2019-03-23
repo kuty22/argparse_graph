@@ -1,12 +1,12 @@
 import setuptools
 
 long_description=""
-with open("../README.md", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="argparse-graph",
-    version="0.1.0",
+    version="0.1.1",
     author="Quentin Le Baron",
     author_email="quentin.le-baron@epitech.eu",
     license="Apache 2.0",
@@ -19,7 +19,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.6",
-        "License :: OSI Approved :: Apache 2.0 License",
+        "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
 )

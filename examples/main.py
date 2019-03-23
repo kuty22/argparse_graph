@@ -1,4 +1,3 @@
-
 #import
 import argparse
 import yaml
@@ -7,7 +6,7 @@ import json
 from argparseGraph.argparseGraph import argparseGraph as agG
 
 def parsarg():
-    parser = argparse.ArgumentParser(description="random options for senarios")
+    parser = argparse.ArgumentParser(description="random options for scenarios")
     parser.add_argument("-q", dest="argv1", help="test", type=int)
     parser.add_argument("-w", dest="argv2", help="test", type=int, action='append')
     parser.add_argument("-e", dest="argv3", help="test", type=str, default="test3")
@@ -21,7 +20,7 @@ def parsarg():
 
 def main():
     res_args = parsarg()
-    agg = agG("senarios_examples.yml", res_args, verbose=False)
+    agg = agG("scenarios_examples.yml", res_args, verbose=False)
 
     agg_one = agg.get_one()
     print("get_one: {}".format(agg_one))

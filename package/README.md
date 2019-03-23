@@ -48,7 +48,7 @@ example of argparse object:
 from argparseGraph.argparseGraph import argparseGraph as agg
 
 def parsarg():
-    parser = argparse.ArgumentParser(description="random options for differents scenarios")
+    parser = argparse.ArgumentParser(description="random options for differents cenarios")
     parser.add_argument("-q", dest="argv1", help="test", type=int)
     parser.add_argument("-w", dest="argv2", help="test", type=int, action='append')
     parser.add_argument("-e", dest="argv3", help="test", type=str, default="test3")
