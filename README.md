@@ -140,19 +140,19 @@ make test_install
 
 _Makefile commands available_:
 
-|          **Commands name**           | **Description**                       |
-|:------------------------------------:|:------------------------------------- |
-|            `make install`            | install `argparseGraph`               |
-|                                      |                                       |
-|           `make uninstall`           | uninstall `argparseGraph`             |
-|                                      |                                       |
-|             `make test`              | run test on sources not installed     |
-|                                      |                                       |
-|         `make test_install`          | run test on the package installed     |
-|                                      |                                       |
-|              `make run`              | run example                           |
-| `make run scenarios=[1 , 2, 3, 4, 5]` | run example with a specifique scenarios|
-|                                      |                                       |
+|           **Commands name**           | **Description**                         |
+|:-------------------------------------:|:--------------------------------------- |
+|            `make install`             | install `argparseGraph`                 |
+|                                       |                                         |
+|           `make uninstall`            | uninstall `argparseGraph`               |
+|                                       |                                         |
+|              `make test`              | run test on sources not installed       |
+|                                       |                                         |
+|          `make test_install`          | run test on the package installed       |
+|                                       |                                         |
+|              `make run`               | run example                             |
+| `make run scenarios=[1 , 2, 3, 4, 5]` | run example with a specifique scenarios |
+|                                       |                                         |
 
 you can specify makefile options:
 
@@ -162,6 +162,17 @@ you can specify makefile options:
 |                       |             |                                             |
 | `PYTHON_DEFAULT_EXEC` | python3     | Use Python to run tests and install package |
 |                       |             |                                             |
+
+**releases version:**
+
+|  **releases version**  | ** releases short** | **Description**                                       |
+|:----------------------:|:------------------- | ----------------------------------------------------- |
+| `argparse-graph-0.1.1` | 0.1.1               | [Patch] Fix setup.py  (+syntax)                       |
+|                        |                     |                                                       |
+| `argparse-graph-0.1.0` | 0.1.0               | Basic scenarios with `options` format list and string |
+|                        |                     | [Error in the setup.py because of the README.md]      |
+|                        |                     |                                                       |
+
 
 
 **Credit Idea Gael Rottier**
