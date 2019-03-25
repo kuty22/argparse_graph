@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="argparse-graph",
     version="0.1.1",
-    author="Quentin Le Baron",
+    author="Quentin Le Baron", "Robin Nassoy"
     author_email="quentin.le-baron@epitech.eu",
     license="Apache 2.0",
     description="yaml file to add logique with argparse object.",
